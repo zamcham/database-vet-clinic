@@ -10,3 +10,20 @@ CREATE TABLE animals (
 );
 
 ALTER TABLE animals ADD COLUMN species VARCHAR;
+
+CREATE TABLE owners (
+  id SERIAL PRIMARY KEY,
+  full_name VARCHAR,
+  age INTEGER
+);
+
+CREATE TABLE species (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR
+);
+
+ALTER TABLE animals
+id SERIAL PRIMARY KEY,
+DROP COLUMN species,
+ADD COLUMN species_id INTEGER REFERENCES species(id),
+ADD COLUMN owner_id INTEGER REFERENCES owners(id);
