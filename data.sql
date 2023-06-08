@@ -15,3 +15,10 @@ VALUES ('Charmander', '2020-02-08', 0, false, -11, 'Fire'),
        ('Boarmon', '2005-06-07', 7, true, 20.4, 'Mammal'),
        ('Blossom', '1998-10-13', 3, true, 17, 'Flower'),
        ('Ditto', '2022-05-14', 4, true, 22, 'Normal');
+
+BEGIN;
+UPDATE animals
+SET species = 'unspecified';
+SELECT * FROM animals;
+ROLLBACK;
+SELECT * FROM animals;
