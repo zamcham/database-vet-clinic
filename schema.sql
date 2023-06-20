@@ -41,3 +41,6 @@ CREATE TABLE specializations (
   species_id INTEGER REFERENCES species(id),
   PRIMARY KEY (vet_id, species_id)
 );
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
