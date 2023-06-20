@@ -30,6 +30,10 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 The primary objective of the Vet Clinic project is to establish a relational database framework tailored specifically for a veterinary clinic. Its purpose is to enhance operational efficiency, streamline record-keeping, and elevate the standard of patient care through the seamless integration of clinic processes and effortless retrieval of data.
 
+Our RD Diagram is as follows:
+![ER Diagram](https://i.imgur.com/TVw4ryg.png "ER Diagram")
+
+
 ## 🛠 Built With <a name="built-with"></a>
 PostgreSQL 15
 
