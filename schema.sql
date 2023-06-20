@@ -53,7 +53,7 @@ CREATE TABLE visits_partitioned (
   id INT GENERATED ALWAYS AS IDENTITY,
   animal_id INT,
   vet_id INT,
-  date_of_visit DATE,
+  visit_date DATE,
   PRIMARY KEY(id, vet_id)
 ) PARTITION BY RANGE (vet_id);
 
