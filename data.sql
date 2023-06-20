@@ -174,7 +174,7 @@ INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id F
 -- This will add 2.500.000 owners with full_name = 'Owner <X>' and email = 'owner_<X>@email.com' (~2min approx.)
 insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
 
-INSERT INTO visits_partition_1 (id, animal_id, vet_id, date_of_visit) SELECT id, animal_id, vet_id, date_of_visit FROM visits WHERE vet_id = 1;
-INSERT INTO visits_partition_2 (id, animal_id, vet_id, date_of_visit) SELECT id, animal_id, vet_id, date_of_visit FROM visits WHERE vet_id = 2;
-INSERT INTO visits_partition_3 (id, animal_id, vet_id, date_of_visit) SELECT id, animal_id, vet_id, date_of_visit FROM visits WHERE vet_id = 3;
-INSERT INTO visits_partition_4 (id, animal_id, vet_id, date_of_visit) SELECT id, animal_id, vet_id, date_of_visit FROM visits WHERE vet_id = 4;
+INSERT INTO visits_partition_1 (id, animal_id, vet_id, visit_date) SELECT id, animal_id, vet_id, visit_date FROM visits WHERE vet_id = 1;
+INSERT INTO visits_partition_2 (id, animal_id, vet_id, visit_date) SELECT id, animal_id, vet_id, visit_date FROM visits WHERE vet_id = 2;
+INSERT INTO visits_partition_3 (id, animal_id, vet_id, visit_date) SELECT id, animal_id, vet_id, visit_date FROM visits WHERE vet_id = 3;
+INSERT INTO visits_partition_4 (id, animal_id, vet_id, visit_date) SELECT id, animal_id, vet_id, visit_date FROM visits WHERE vet_id = 4;
