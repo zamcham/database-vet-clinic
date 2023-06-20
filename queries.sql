@@ -166,3 +166,5 @@ WHERE vt.name = 'Maisy Smith'
 GROUP BY s.name
 ORDER BY COUNT(*) DESC
 LIMIT 1;
+
+EXPLAIN ANALYZE SELECT * FROM visits_partition_2;
